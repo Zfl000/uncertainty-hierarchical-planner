@@ -6,10 +6,7 @@ intent anchors, and a conditional diffusion Transformer refines them into a
 dense state-action trajectory. An uncertainty-aware energy module provides a
 smooth dynamic safety potential and differentiable inference-time guidance.
 
-Only architecture and self-contained utility code are released here. Training
-data, raw simulator traces, model checkpoints, experiment logs, result tables,
-and private deployment files are intentionally excluded. The dataset and any
-additional release materials will be published after review and approval.
+The dataset and any additional release materials will be published after review and approval.
 
 ## Install
 
