@@ -1,0 +1,33 @@
+# Data and private artifacts
+*.npz
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.csv
+*.json
+*.db
+*.sqlite
+*.log
+data/
+datasets/
+checkpoints/
+weights/
+results/
+logs/
+
+# Python/build artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Local/editor/system files
+.DS_Store
+.idea/
+.vscode/
+.env
