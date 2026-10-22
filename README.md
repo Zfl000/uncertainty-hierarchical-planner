@@ -66,10 +66,15 @@ and excess-energy diagnostics.
 
 ## Reproducibility and scope
 
-The research manuscript reports separate SUMO closed-loop and nuPlan offline
-experiments. Those artifacts are not part of this public architecture-only
-repository. No Apollo D-KIT adapter, physical-vehicle log, or actuator
-calibration is included; deployment requires independent validation.
+The manuscript reports SUMO closed-loop evaluations and nuPlan experiments involving dataset-specific retraining followed by closed-loop simulation. For nuPlan, recorded driving data are used for offline training. During evaluation, the generated ego trajectory is executed in simulation, and the updated ego state is fed back into subsequent planning cycles. These experiments evaluate adaptation after retraining, rather than zero-shot transfer of the SUMO-trained model.
+
+This public repository provides the model architecture. The datasets and experiment-specific artifacts required to reproduce the reported results are not included, so this repository alone does not provide a complete reproduction pipeline. The experimental protocols and configurations are described in the revised manuscript.
+
+For the nuPlan dataset, simulation infrastructure, and metric definitions, please refer to the [official nuPlan devkit](https://github.com/motional/nuplan-devkit) and the nuPlan benchmark paper cited in the manuscript. These resources provide the underlying benchmark infrastructure; reproducing our reported results also requires the study-specific model adaptation and evaluation settings.
+
+Release of the custom SUMO dataset is subject to approval. The dataset will be made publicly available through this repository once the required approval has been obtained.
+
+No Apollo D-KIT adapter, physical-vehicle logs, or actuator-calibration artifacts are included. The deployment results reported in the manuscript concern software integration and computational profiling; they do not constitute physical closed-loop road validation. Vehicle deployment requires independent integration and validation.
 
 ## License
 
